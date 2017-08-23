@@ -12,7 +12,7 @@
     <properties>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.version>1.5.3</serenity.version>
+        <serenity.version>1.5.5</serenity.version>
         <webdriver.driver>chrome</webdriver.driver>
         <testThreadCount>1</testThreadCount>
         <testForkCount>15</testForkCount>
@@ -43,7 +43,7 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>3.6.2</version>
+            <version>3.8.0</version>
         </dependency>
         <dependency>
             <groupId>io.rest-assured</groupId>
@@ -83,7 +83,7 @@
             <plugin>
                 <groupId>net.serenity-bdd.maven.plugins</groupId>
                 <artifactId>serenity-maven-plugin</artifactId>
-                <version>1.5.0-rc.1</version>
+                <version>${serenity.version}</version>
                 <executions>
                     <execution>
                         <id>serenity-reports</id>
