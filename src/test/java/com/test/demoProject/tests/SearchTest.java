@@ -23,10 +23,17 @@ public class SearchTest {
 	@Steps
 	public FirstStep firstStep;
 
-	@Test(expected = NoSuchElementException.class)
+	@Test
 	@WithTagValuesOf({"Profile"})
-	public void accountDetails() {
+	public void waitForElementExtendedWait() {
 		firstStep.openFirstPage();
-		Assert.assertTrue(firstStep.checkElement());
+		firstStep.waitForElementExtendedWait();
+	}
+
+	@Test
+	@WithTagValuesOf({"Profile"})
+	public void waitForElementNormalWait() {
+		firstStep.openFirstPage();
+		firstStep.waitForElementNormalWait();
 	}
 }

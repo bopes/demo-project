@@ -6,6 +6,8 @@ import net.thucydides.core.annotations.At;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * Created by strugariu on 7/18/2017.
  */
@@ -13,13 +15,15 @@ import org.openqa.selenium.support.FindBy;
 @DefaultUrl("https://www.google.com/")
 public class FirstPage extends PageObject {
 
-	@FindBy(css=".NoEl")
-	WebElementFacade element;
+	@FindBy(css=".tryMe1")
+	WebElementFacade iDontExist;
 
+	public void waitForElementExtendedWait(){
+		iDontExist.withTimeoutOf(20, TimeUnit.SECONDS).waitUntilPresent();
+	}
 
-	public Boolean isElVisible(){
-		element.waitUntilVisible();
-		return element.isVisible();
+	public void waitForElementNormalWait(){
+		iDontExist.waitUntilPresent();
 	}
 
 }

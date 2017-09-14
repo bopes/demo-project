@@ -10,16 +10,25 @@ import net.thucydides.core.steps.ScenarioSteps;
  */
 public class FirstStep extends ScenarioSteps{
 
-		private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
 	FirstPage firstPage;
+
 	@Step
 	public void openFirstPage() {
 		firstPage.open();
 	}
 
 	@Step
-	public Boolean checkElement(){
-		return firstPage.isElVisible();
+	public void waitForElementExtendedWait()
+		{
+			firstPage.waitForElementExtendedWait();
+		}
+
+
+	@Step
+	public void waitForElementNormalWait()
+	{
+		firstPage.waitForElementNormalWait();
 	}
-	}
+}
