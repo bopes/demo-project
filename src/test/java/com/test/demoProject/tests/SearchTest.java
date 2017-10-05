@@ -4,11 +4,10 @@ import com.test.demoProject.steps.FirstStep;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
-import net.thucydides.core.annotations.WithTagValuesOf;
-import org.junit.Assert;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.NoSuchElementException;
+
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -23,17 +22,9 @@ public class SearchTest {
 	@Steps
 	public FirstStep firstStep;
 
-	@Test
-	@WithTagValuesOf({"Profile"})
+	@Test(expected = org.openqa.selenium.NoSuchElementException.class)
 	public void waitForElementExtendedWait() {
 		firstStep.openFirstPage();
-		firstStep.waitForElementExtendedWait();
 	}
 
-	@Test
-	@WithTagValuesOf({"Profile"})
-	public void waitForElementNormalWait() {
-		firstStep.openFirstPage();
-		firstStep.waitForElementNormalWait();
-	}
 }

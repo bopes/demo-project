@@ -18,17 +18,4 @@ public class FirstStep extends ScenarioSteps{
 	public void openFirstPage() {
 		firstPage.open();
 	}
-
-	@Step
-	public void waitForElementExtendedWait()
-		{
-			firstPage.waitForElementExtendedWait();
-		}
-
-
-	@Step
-	public void waitForElementNormalWait()
-	{
-		firstPage.waitForElementNormalWait();
-	}
 }
