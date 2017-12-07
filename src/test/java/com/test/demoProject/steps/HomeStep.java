@@ -1,7 +1,6 @@
 package com.test.demoProject.steps;
 
-import com.test.demoProject.pages.FirstPage;
-import net.serenitybdd.core.pages.PageObject;
+import com.test.demoProject.pages.HomePage;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 
@@ -10,20 +9,27 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * Created by strugariu on 7/18/2017.
  */
-public class FirstStep extends ScenarioSteps{
+public class HomeStep extends ScenarioSteps{
 
 		private static final long serialVersionUID = 1L;
 
-	FirstPage firstPage;
+	HomePage homePage;
 	@Step
 	public void openFirstPage() {
-		firstPage.open();
+		homePage.open();
+	}
+
+	@Step
+	public void typeSearch(String value){
+		homePage.typeSearch(value);
 	}
 
 	@Step
 	public Boolean checkElement(){
-		return firstPage.isElVisible();
+		return homePage.isElVisible();
 	}
+
+
 
 	@Step("asserts that {1} is true. Message:{0}")
 	public void doAAssert(String message,Boolean value){
