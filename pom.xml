@@ -59,17 +59,7 @@
             <version>3.0.2</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.garmin.testing</groupId>
-            <artifactId>helpers</artifactId>
-            <version>RELEASE</version>
-        </dependency>
 
-        <dependency>
-            <groupId>com.garmin.testing</groupId>
-            <artifactId>mocks</artifactId>
-            <version>RELEASE</version>
-        </dependency>
     </dependencies>
 
     <build>
